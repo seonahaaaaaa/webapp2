@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>02_연습.html</title>
+</head>
+<body>
+
+<p>
+<video width="320" height="240" controls>
+  <source src='../media/mov_bbb.mp4' type="video/mp4">
+Your browser does not support the video tag.  <!-- 버전으로 인해 동영상 출력 불가시에 안내 문구 -->
+</video>
+</p>
+
+<p>
+<audio controls>
+  <source src='../media/IU.mp3' type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</p>
+
+<p>
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+</p>
+
+<!-- ifrme : 다른 사이트 붙일시 : 네이버, 다음 등 대형 플랫폼은 불가 -->
+<p>
+<iframe width="420" height="315"
+src="https://www.nate.com">
+</iframe>
+</p>
+
+<h2>상대경로</h2>
+<!-- 상대경로 : 현재 파일이 존재하는 디렉토리를 기준으로 해당 파일까지의 위치를 작성한 경로이다. -->
+<ul>
+	<li><a href = '../0_check/good.html'>페이지</a></li>	<!-- . : 자기 자신 / .. : 부모 -->
+	<li><a href = '../images/sample/sensitive.jpg'>이미지</a></li>	<!-- 경로이동시 : / 로 구분 -->
+	<li><a href = '../media/IU.mp3'>음악</a></li>
+	<li><a href = '../media/mov_bbb.mp4'>동영상</a></li>
+</ul>
+<hr/> <!-- <hr></hr> 합친게 = <hr/> -->
+
+<h2>절대경로</h2>
+<!-- 절대경로 : 최상위 디렉토리부터 해당 파일까지 경유한 모든 경로를 전부 기입하는 방식이다. -->
+	<li><a href = '/WebUI/0_check/good.html'>페이지</a></li>
+	<li><a href = '/WebUI/images/sample/sensitive.jpg'>이미지</a></li>
+	<li><a href = '/WebUI/media/IU.mp3'>음악</a></li>
+	<li><a href = '/WebUI/media/mov_bbb.mp4'>동영상</a></li>
+
+</body>
+</html>

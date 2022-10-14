@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 06_SimpleForm.html </title>
+</head>
+<body>
+
+<form>
+<!-- method : 웹 상에서 전달 방식을 뜻함.  -->
+<!-- <form method = 'post' : url에 사용자가 입력한 데이터가 출력되지 않게끔 숨김 처리> -->
+	<fieldset style='width:350 ; border:5'> <!-- 테두리 -->
+		<legend>회원가입</legend> <!-- 테두리안에 글자 작성 -->
+		<ol>  <!-- 목록을 순번으로 지정 -->
+			<li>
+				<label for = 'name'>이름</label>
+				<input type = 'text' id='name' name = 'name'>
+			</li>
+			<li>
+				<label for = 'gender'>성별</label>	<!-- radio box 는 중복 체크되면 안되기 때문에 동일한 라디오박스끼리 동일한 네임으로 별칭 해줘야 함. -->
+				<input type = 'radio' name = 'gender' checked = 'checked'> 남자
+				<input type = 'radio' name = 'gender' > 여자
+			</li>
+			<li>
+				<label for = 'job'>직업</label>
+				<select id = 'job' name = 'job'>
+					<option>개발자</option>
+					<option>프로그래머</option>
+					<option>코더</option>
+					<option>노가다</option>
+				</select>
+			</li>
+			<li>
+				<label for = 'hobby'>취미</label>	
+				<input type = 'checkbox' name = 'hobby' checked = 'checked'>잠자기
+				<input type = 'checkbox' name = 'hobby'>밥먹기
+				<input type = 'checkbox' name = 'hobby'>숨쉬기
+				<input type = 'checkbox' name = 'hobby'>멍때리기
+			</li>
+			<li>
+				<label for = 'lover'>애인</label>	<!-- radio box 는 중복 체크되면 안되기 때문에 동일한 라디오박스끼리 네임 별칭 해줘야 함. -->
+				<input type = 'radio' name = 'lover'> 있다
+				<input type = 'radio' name = 'lover'> 없다
+			</li>
+			<li>
+				<input type = 'submit' value = '확인'>
+				<input type = 'reset' value = '취소'>
+			</li>	
+		</ol>
+	</fieldset>
+
+
+	<fieldset>
+		<legend>개인 정보</legend> 
+			<ol>
+				<li>
+					<label for = 'name'>이름</label>
+					<input type = 'text' placeholder='5자미만 공백없이' id = 'name'>
+				</li>
+				<li>
+					<label for = 'mail'>메일 주소</label>
+					<input type = 'text' placeholder='abcd@domain.com' id = 'mail'>
+				</li>
+				<li>
+					<label for = 'phone'>연락처</label>
+					<input type = 'text' id = 'phone'>
+				</li>
+				<li>
+					<label for = 'birth'>생일</label>
+					<input type = 'text' placeholder='연도-월-일' id = 'birth'>
+				</li>	
+			</ol>
+	</fieldset>		
+	
+	<fieldset>
+		<legend>코딩 숙련도(상,중,하)</legend> 
+			<ol>
+				<li>
+				<input type="range" min="0" max="100" step="1" value="50"/>
+				</li>
+		    </ol>
+		    <hr/>
+			    <input type = 'submit' value = '제출'>
+		</fieldset>
+
+</form>
+
+
+</body>
+</html>
